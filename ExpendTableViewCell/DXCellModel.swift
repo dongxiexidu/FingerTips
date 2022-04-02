@@ -37,8 +37,8 @@ class DXCellModel: NSObject {
     //MARK: --计算文字的高度
      fileprivate class func getSpaceLabelHeight(text:String,font:CGFloat,width:CGFloat) -> CGFloat {
         
-        let paraDic:[String : Any] = [NSFontAttributeName:UIFont.systemFont(ofSize: font)]
-        let size = text.boundingRect(with: CGSize(width:width,height:CGFloat(MAXFLOAT)), options: .usesLineFragmentOrigin, attributes: paraDic, context: nil)
+         let paraDic:[NSAttributedString.Key : Any] = [NSAttributedString.Key.font : UIFont.systemFont(ofSize: font)]
+         let size = text.boundingRect(with: CGSize(width:width,height:CGFloat(MAXFLOAT)), options: .usesLineFragmentOrigin, attributes: paraDic, context: nil)
         return size.height;
     }
    

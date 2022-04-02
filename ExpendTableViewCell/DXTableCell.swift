@@ -33,10 +33,10 @@ class DXTableCell: UITableViewCell {
         return cell!
     }
     
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         self.cellType = .normal
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        self.selectionStyle = UITableViewCellSelectionStyle.none
+        self.selectionStyle = UITableViewCell.SelectionStyle.none
         setupContentView()
     }
     
